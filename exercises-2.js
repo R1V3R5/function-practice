@@ -66,15 +66,15 @@ function rovarspraket(phrase) {
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-var reverse = function(string) {
+function reverse(string) {
   var length = string.length;
-  var reversed = [];
-  var joined = ("");
+  var reverse = [];
+  var join = ("");
   for (i = length; i > 0; i--) {
-    reversed.push(string.charAt(i - 1));
+    reverse.push(string.charAt(i - 1));
   };
   for (i = 0; i < (length); i++) {
-    joined += (reversed[i]);
+    join += (reverse[i]);
   }
-  return joined;
+  return join;
 }
