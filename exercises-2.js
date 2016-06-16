@@ -16,21 +16,25 @@ function max(a, b) {
 // ---------------------
 
 function maxOfThree(a, b, c) {
-  var max = Math.max(a, b, c)
-  return max;
+  return Math.max(a, b, c);
 }
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
 
+// function isVowel(char) {
+//   vowel = ["a", "e", "i", "o", "u"]
+//   if (vowel.includes(char)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
 function isVowel(char) {
-  vowel = ["a", "e", "i", "o", "u"]
-  if (vowel.includes(char)) {
-    return true;
-  } else {
-    return false;
-  }
+  vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+  return vowel.includes(char);
 };
 
 // ---------------------
@@ -38,25 +42,16 @@ function isVowel(char) {
 // ---------------------
 
 function rovarspraket(phrase) {
-  //   var wordArray = [phrase];
-  //   console.log(wordArray);
-  // }
   var results = ""
   var pLength = phrase.length;
   for (i = 0; i < pLength; i++) {
     var letter = phrase.charAt(i)
-    var vowels = ["a", "e", "i", "o", "u", " "]
+    var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U", " "]
     if (!vowels.includes(letter)) {
-      //  console.log(letter)
       results = results + letter + "o" + letter
-      //  console.log(results)
     } else {
       results = results + letter
     }
-    // console.log(results);
-    // if (isVowel(i) == "True"){
-    //    console.log("Yep")
-    //  }
   }
   return results;
 };
